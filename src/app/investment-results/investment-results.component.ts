@@ -10,6 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
-  results = input<InvestmentResults[] | undefined>();
+  results = input<InvestmentResults[]>();
 
 }

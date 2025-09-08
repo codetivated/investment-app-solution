@@ -12,7 +12,7 @@ import type { InvestmentResults } from './investment-output.model';
   imports: [HeaderComponent, UserInputComponent, InvestmentResultsComponent],
 })
 export class AppComponent {
-  investmentResults = signal<InvestmentResults[] | undefined>(undefined);
+  resultsData = signal<InvestmentResults[] | undefined>(undefined);
 
   onCalculateInvestmentResults(data: InvestmentInput) {
     const annualData: InvestmentResults[] = [];
@@ -34,7 +34,7 @@ export class AppComponent {
       totalAmountInvested: initialInvestment + annualInvestment * year,
     });
   }
-    this.investmentResults.set(annualData);
+    this.resultsData.set(annualData);
 }
 
 

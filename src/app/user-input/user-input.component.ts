@@ -24,11 +24,16 @@ export class UserInputComponent {
     annualInvestment: +this.enteredAnnualInvestment(),
     expectedReturn: +this.enteredExpectedReturn(),
     duration: +this.enteredDuration()
-});
-  this.enteredInitialInvestment.set('');
-  this.enteredAnnualInvestment.set('');
-  this.enteredExpectedReturn.set('');
-  this.enteredDuration.set('');
+  });
+
+  this.resetForm();
+}
+
+  resetForm() {
+    this.enteredInitialInvestment.set('');
+    this.enteredAnnualInvestment.set('');
+    this.enteredExpectedReturn.set('');
+    this.enteredDuration.set('');
   }
 
 }
