@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import type { InvestmentResults } from '../investment-output.model';
 import { CommonModule } from '@angular/common';
 
@@ -10,6 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './investment-results.component.css'
 })
 export class InvestmentResultsComponent {
-  @Input() results?: InvestmentResults[] = [];
+  results = input<InvestmentResults[] | undefined>();
 
 }
