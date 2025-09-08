@@ -7,7 +7,7 @@ import { signal } from '@angular/core';
   providedIn: 'root'
 })
 export class InvestmentService {
-  resultData?: InvestmentResults[];
+  resultData = signal<InvestmentResults[] | undefined>(undefined);
 
 calculateInvestmentResults(data: InvestmentInput) {
     const annualData: InvestmentResults[] = [];
@@ -29,7 +29,7 @@ calculateInvestmentResults(data: InvestmentInput) {
       totalAmountInvested: initialInvestment + annualInvestment * year,
     });
   }
-    this.resultData = annualData;
+    this.resultData.set(annualData);
 }
 
 }
